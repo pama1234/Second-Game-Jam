@@ -9,6 +9,6 @@ public abstract class SaveBase
     protected SaveSettings _settings;
     protected void Load(bool rootMightNotExist)
     {
-
+        //var json = 
     }
 }

@@ -10,12 +10,13 @@ public class ManagersLoader : MonoBehaviour
     public GameObject LangPrf;
     public GameObject SavePrf;
     public GameObject DialogPrf;
+    public GameObject GaMPrf;
     public static bool isInit = false;
     private void Awake()
     {
         if (!isInit)
         {
-            if (AudioPrf == null || CursorPrf == null || TransPrf == null || LangPrf == null || SavePrf == null || DialogPrf == null)
+            if (AudioPrf == null || CursorPrf == null || TransPrf == null || LangPrf == null || SavePrf == null || DialogPrf == null || GaMPrf == null)
             {
                 Debug.LogError("Please check your ManagersLoader gameObject");
             }
@@ -56,6 +57,12 @@ public class ManagersLoader : MonoBehaviour
                     Destroy(FindObjectOfType<DialogManager>().gameObject);
                 }
                 DontDestroyOnLoad(Instantiate(DialogPrf));
+
+                if (FindObjectOfType<GameManager>() != null)
+                {
+                    Destroy(FindObjectOfType<GameManager>().gameObject);
+                }
+                DontDestroyOnLoad(Instantiate(GaMPrf));
                 isInit = true;
             }
         }

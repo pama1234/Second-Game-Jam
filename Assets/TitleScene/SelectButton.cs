@@ -10,6 +10,7 @@ public class SelectButton : MonoBehaviour
     SettingBtnCust[] storageButtons;
     public void SaveSettings()
     {
+        DialogManager.Instance.Init();
         //应该传到SaveManager里面，先做简易版（。。）
         foreach (var singleBtn in storageButtons)
         {

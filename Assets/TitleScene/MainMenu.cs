@@ -16,6 +16,7 @@ public class MainMenu : TitleMenuBase<MainMenu>
     public void OnDeveloperPressed()
     {
         gameObject.GetComponentInParent<TitleController>().developerMenu.Open();
+        gameObject.GetComponentInParent<TitleController>().developerMenu.InitDialog();
     }
     public void OnSettingPressed()
     {

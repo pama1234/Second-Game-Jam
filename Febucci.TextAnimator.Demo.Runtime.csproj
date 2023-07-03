@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{941219F0-12EF-B540-3984-EC1D652D8D83}</ProjectGuid>
+    <ProjectGuid>{023E048D-D814-70B9-9F33-7FFBB962F145}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Febucci.TextAnimator.Demo.Runtime</AssemblyName>
@@ -681,7 +681,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Febucci.TextAnimator.Runtime.csproj">
-      <Project>{92C38C07-F7AA-5A40-6114-49EC3502001A}</Project>
+      <Project>{22290922-CD65-1F80-4EFF-D00C158AEDC6}</Project>
       <Name>Febucci.TextAnimator.Runtime</Name>
     </ProjectReference>
   </ItemGroup>

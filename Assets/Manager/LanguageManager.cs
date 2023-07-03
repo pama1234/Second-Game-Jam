@@ -88,7 +88,6 @@ public class LanguageManager : Singleton<LanguageManager>
             return;
         }
         //先遍历所有的文字
-//TO DO: 当找不到的时候应该有一个排除方法
         Scene scene = SceneManager.GetActiveScene();
         List<GameObject> allObj = new List<GameObject>(scene.GetRootGameObjects());
         List<GameObject> newObj = new List<GameObject>();

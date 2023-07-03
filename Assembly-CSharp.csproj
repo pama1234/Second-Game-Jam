@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{27A7AE4C-F032-1283-638E-DC8BECCE24BA}</ProjectGuid>
+    <ProjectGuid>{1431483F-06A0-035F-62D6-3D7505B38037}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,6 +63,7 @@
     <Compile Include="Assets\TitleScene\ButtonEvent.cs" />
     <Compile Include="Assets\Manager\SaveSystem\SaveWriter.cs" />
     <Compile Include="Assets\Manager\SaveSystem\SaveReader.cs" />
+    <Compile Include="Assets\Manager\DialogManager.cs" />
     <Compile Include="Assets\Manager\SaveManager.cs" />
     <Compile Include="Assets\Manager\AudioManager.cs" />
     <Compile Include="Assets\TitleScene\TextScrolling.cs" />
@@ -71,14 +72,15 @@
     <Compile Include="Assets\Manager\SaveSystem\SaveSettings.cs" />
     <Compile Include="Assets\Manager\TransManager.cs" />
     <Compile Include="Assets\Manager\Singleton.cs" />
+    <Compile Include="Assets\Manager\DialogContent\DialogContent.cs" />
     <Compile Include="Assets\Manager\CursorManager.cs" />
     <Compile Include="Assets\Manager\ManagersLoader.cs" />
     <Compile Include="Assets\Manager\SaveSystem\SaveBase.cs" />
     <Compile Include="Assets\TitleScene\SettingMenu.cs" />
     <Compile Include="Assets\TitleScene\ContinueMenu.cs" />
     <Compile Include="Assets\TitleScene\TitleMenuBase.cs" />
-    <Compile Include="Assets\Manager\DialogManager.cs" />
-    <Compile Include="Assets\Manager\DialogContent\DialogContent.cs" />
+    <Compile Include="Assets\Manager\SaveSystem\FileAccess.cs" />
+    <Compile Include="Assets\Manager\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ExternalTools\Febucci\Text Animator\Example\Font\OFL.txt" />
@@ -121,6 +123,7 @@
     <None Include="Assets\PostProcessing\Shaders\XNoiseLibrary.hlsl" />
     <None Include="Assets\ExternalTools\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\PostProcessing\Shaders\Blending.hlsl" />
+    <None Include="Assets\ChineseLag.txt" />
     <None Include="Assets\Resources\Language.txt" />
     <None Include="Assets\ExternalTools\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\ExternalTools\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
@@ -725,17 +728,11 @@
     <Reference Include="PsdPlugin">
       <HintPath>Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
@@ -803,22 +800,28 @@
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Febucci.TextAnimator.Editor.csproj">
-      <Project>{60AD444E-E4F0-1C1E-21D3-5AAF5B572272}</Project>
+      <Project>{1B5AF55A-20BB-5CAD-1FFF-2BB66BB9B59C}</Project>
       <Name>Febucci.TextAnimator.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Febucci.TextAnimator.Demo.Runtime.csproj">
-      <Project>{941219F0-12EF-B540-3984-EC1D652D8D83}</Project>
+      <Project>{023E048D-D814-70B9-9F33-7FFBB962F145}</Project>
       <Name>Febucci.TextAnimator.Demo.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Febucci.TextAnimator.Demo.Editor.csproj">
-      <Project>{BE4B2C6E-9270-D92D-6566-3EDB342FD4F4}</Project>
+      <Project>{5083456E-8B1C-F569-1622-E53A007CA382}</Project>
       <Name>Febucci.TextAnimator.Demo.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Febucci.TextAnimator.Runtime.csproj">
-      <Project>{92C38C07-F7AA-5A40-6114-49EC3502001A}</Project>
+      <Project>{22290922-CD65-1F80-4EFF-D00C158AEDC6}</Project>
       <Name>Febucci.TextAnimator.Runtime</Name>
     </ProjectReference>
   </ItemGroup>

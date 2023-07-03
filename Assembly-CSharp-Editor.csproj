@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{866B7B4C-C9A7-333B-C32E-C08A2D9366A6}</ProjectGuid>
+    <ProjectGuid>{E8732CFD-E24C-1D22-2B4D-E35394AE268A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -776,23 +776,23 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{27A7AE4C-F032-1283-638E-DC8BECCE24BA}</Project>
+      <Project>{1431483F-06A0-035F-62D6-3D7505B38037}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="Febucci.TextAnimator.Editor.csproj">
-      <Project>{60AD444E-E4F0-1C1E-21D3-5AAF5B572272}</Project>
+      <Project>{1B5AF55A-20BB-5CAD-1FFF-2BB66BB9B59C}</Project>
       <Name>Febucci.TextAnimator.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Febucci.TextAnimator.Demo.Runtime.csproj">
-      <Project>{941219F0-12EF-B540-3984-EC1D652D8D83}</Project>
+      <Project>{023E048D-D814-70B9-9F33-7FFBB962F145}</Project>
       <Name>Febucci.TextAnimator.Demo.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Febucci.TextAnimator.Demo.Editor.csproj">
-      <Project>{BE4B2C6E-9270-D92D-6566-3EDB342FD4F4}</Project>
+      <Project>{5083456E-8B1C-F569-1622-E53A007CA382}</Project>
       <Name>Febucci.TextAnimator.Demo.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Febucci.TextAnimator.Runtime.csproj">
-      <Project>{92C38C07-F7AA-5A40-6114-49EC3502001A}</Project>
+      <Project>{22290922-CD65-1F80-4EFF-D00C158AEDC6}</Project>
       <Name>Febucci.TextAnimator.Runtime</Name>
     </ProjectReference>
   </ItemGroup>

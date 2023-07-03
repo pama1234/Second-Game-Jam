@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{92C38C07-F7AA-5A40-6114-49EC3502001A}</ProjectGuid>
+    <ProjectGuid>{22290922-CD65-1F80-4EFF-D00C158AEDC6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Febucci.TextAnimator.Runtime</AssemblyName>
