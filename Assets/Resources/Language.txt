@@ -1,0 +1,13 @@
+New Start:新的开始
+Continue:继续游戏
+Developers:开发者信息
+Settings:游戏设置
+Exit Game:退出游戏
+Resolution:分辨率设置
+Screen Size:屏幕大小
+Language:语言选择
+Full Screen:全屏游玩体验
+Windowed:窗口化
+Save Changes:保存修改
+Back:返回
+Your option change would only be implemented when you press the  "Save Changes" button:你在该界面下的修改操作只有当你按下"保存修改"按钮时才会实行
