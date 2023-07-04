@@ -9,7 +9,7 @@ public class SaveWriter : SaveBase
         _root = root;
         _settings = settings;
     }
-    //这里为创建的入口，用root存储信息，比方说传入"Settings"
+    //这里为创建的入口，用root存储信息，比方说传入"Settings"或者当前"SceneName";
     public static SaveWriter Create(string root)
     {
         return Create(root, new SaveSettings());
@@ -18,5 +18,14 @@ public class SaveWriter : SaveBase
     {
         SaveWriter saveWriter = new SaveWriter(root, settings);
         return null;
+    }
+    public SaveWriter Write<T>(string key, T value)
+    {
+        _items.Add(key, JsonSerialiser.SerializeKey(value));
+        return this;
+    }
+    public void Commit()
+    {
+
     }
 }

@@ -65,12 +65,14 @@
     <Compile Include="Assets\Manager\SaveSystem\SaveReader.cs" />
     <Compile Include="Assets\Manager\DialogManager.cs" />
     <Compile Include="Assets\Manager\SaveManager.cs" />
+    <Compile Include="Assets\Manager\SaveSystem\FileAccess.cs" />
     <Compile Include="Assets\Manager\AudioManager.cs" />
     <Compile Include="Assets\TitleScene\TextScrolling.cs" />
     <Compile Include="Assets\TitleScene\TitleController.cs" />
     <Compile Include="Assets\TitleScene\SettingBtnCust.cs" />
     <Compile Include="Assets\Manager\SaveSystem\SaveSettings.cs" />
     <Compile Include="Assets\Manager\TransManager.cs" />
+    <Compile Include="Assets\Manager\GameManager.cs" />
     <Compile Include="Assets\Manager\Singleton.cs" />
     <Compile Include="Assets\Manager\DialogContent\DialogContent.cs" />
     <Compile Include="Assets\Manager\CursorManager.cs" />
@@ -79,8 +81,7 @@
     <Compile Include="Assets\TitleScene\SettingMenu.cs" />
     <Compile Include="Assets\TitleScene\ContinueMenu.cs" />
     <Compile Include="Assets\TitleScene\TitleMenuBase.cs" />
-    <Compile Include="Assets\Manager\SaveSystem\FileAccess.cs" />
-    <Compile Include="Assets\Manager\GameManager.cs" />
+    <Compile Include="Assets\Manager\SaveSystem\JsonSerialiser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ExternalTools\Febucci\Text Animator\Example\Font\OFL.txt" />
@@ -728,11 +729,17 @@
     <Reference Include="PsdPlugin">
       <HintPath>Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
@@ -799,12 +806,6 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

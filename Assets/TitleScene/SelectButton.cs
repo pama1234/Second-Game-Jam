@@ -11,30 +11,45 @@ public class SelectButton : MonoBehaviour
     public void SaveSettings()
     {
         DialogManager.Instance.Init();
-        //应该传到SaveManager里面，先做简易版（。。）
+        List<string> storageSettings = new List<string>();
         foreach (var singleBtn in storageButtons)
         {
             if (singleBtn.isPressed)
             {
                 switch (singleBtn.nowOptions)
                 {
+                    //速速切换
                     case SettingBtnCust.E_nowOptions.highReso:
+                        storageSettings.Add("highReso");
+                        Screen.SetResolution(1920, 1080,true);
                         break;
                     case SettingBtnCust.E_nowOptions.lowReso:
+                        Screen.SetResolution(1280, 720, true);
+                        storageSettings.Add("lowReso");
                         break;
                     case SettingBtnCust.E_nowOptions.highSize:
+                        storageSettings.Add("highSize");
+                        Screen.fullScreen = true;
                         break;
                     case SettingBtnCust.E_nowOptions.lowSize:
+                        Screen.fullScreen = false;
+                        storageSettings.Add("lowSize");
                         break;
                     case SettingBtnCust.E_nowOptions.EngLang:
+                        LanguageManager.Instance.nowOption = LanguageOption.English;
+                        storageSettings.Add("engLang");
                         break;
                     case SettingBtnCust.E_nowOptions.ChnLang:
+                        LanguageManager.Instance.nowOption = LanguageOption.Chinese;
+                        storageSettings.Add("chnLang");
                         break;
                     default:
                         break;
                 }
             }
         }
+        //Dialog显示完成储存
+        SaveManager.Instance.SaveSettings(storageSettings);
     }
 public void SetButtons()
     {
