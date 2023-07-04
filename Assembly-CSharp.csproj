@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Manager\SaveSystem\JsonSerialiser.cs" />
     <Compile Include="Assets\Manager\LanguageManager.cs" />
     <Compile Include="Assets\TitleScene\MainMenu.cs" />
     <Compile Include="Assets\TitleScene\SelectButton.cs" />
@@ -81,7 +82,6 @@
     <Compile Include="Assets\TitleScene\SettingMenu.cs" />
     <Compile Include="Assets\TitleScene\ContinueMenu.cs" />
     <Compile Include="Assets\TitleScene\TitleMenuBase.cs" />
-    <Compile Include="Assets\Manager\SaveSystem\JsonSerialiser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ExternalTools\Febucci\Text Animator\Example\Font\OFL.txt" />

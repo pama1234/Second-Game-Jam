@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json.Linq;
+using System;
+
 public abstract class SaveBase
 {
     protected JObject _items;
@@ -13,10 +15,23 @@ public abstract class SaveBase
     }
     protected void Load(bool rootMightNotExist)
     {
-        //var json = 
+        //var json = FileAccess
     }
     protected void Save()
     {
-        //string json;
+        string json = null;
+        try
+        {
+            json = JsonSerialiser.Serialize(_items);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("Serialization failed");
+        }
+        if(!FileAccess.SaveString(_root, false, json))
+        {
+            Debug.LogError("Failed to write to file");
+        }
     }
+
 }

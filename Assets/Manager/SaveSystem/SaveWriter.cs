@@ -17,15 +17,20 @@ public class SaveWriter : SaveBase
     public static SaveWriter Create(string root, SaveSettings settings)
     {
         SaveWriter saveWriter = new SaveWriter(root, settings);
-        return null;
+        saveWriter.Load(true);
+        return saveWriter;
     }
     public SaveWriter Write<T>(string key, T value)
     {
+        if (Exist(key))
+        {
+            _items.Remove(key);
+        }
         _items.Add(key, JsonSerialiser.SerializeKey(value));
         return this;
     }
     public void Commit()
     {
-
+        Save();
     }
 }
