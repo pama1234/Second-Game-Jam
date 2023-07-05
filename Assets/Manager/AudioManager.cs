@@ -28,6 +28,10 @@ public class AudioManager : Singleton<AudioManager>
     }
     public void PlayBGM(BackgroundMusic backgroundMusicenum)
     {
+        foreach (var single in bgm)
+        {
+            single.Stop();
+        }
         if((int)backgroundMusicenum < bgm.Length)
         {
             bgm[(int)backgroundMusicenum].Play();

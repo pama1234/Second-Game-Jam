@@ -27,6 +27,16 @@ public static class FileAccess
     }
     public static string LoadString(string fileName, bool includesExtension)
     {
+        fileName = GetFilenameWithExtension(fileName, includesExtension);
+        try
+        {
+            CreateRootFolder();
+        }
+        catch (System.Exception)
+        {
+
+            throw;
+        }
         return null;
     }
     private static string GetFilenameWithExtension(string filename, bool includesExtension)

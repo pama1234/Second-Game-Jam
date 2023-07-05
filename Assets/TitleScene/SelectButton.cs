@@ -8,6 +8,7 @@ public class SelectButton : MonoBehaviour
     List<SettingBtnCust> firstButtons = new List<SettingBtnCust>();
     List<SettingBtnCust> secondButtons = new List<SettingBtnCust>();
     SettingBtnCust[] storageButtons;
+    public GameObject successPanel;
     public void SaveSettings()
     {
         DialogManager.Instance.Init();
@@ -48,10 +49,20 @@ public class SelectButton : MonoBehaviour
                 }
             }
         }
-        //Dialogœ‘ æÕÍ≥…¥¢¥Ê
+        successPanel.SetActive(true);
         SaveManager.Instance.SaveSettings(storageSettings);
     }
-public void SetButtons()
+    public void Update()
+    {
+        if (successPanel.activeSelf)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                successPanel.SetActive(false);
+            }
+        }
+    }
+    public void SetButtons()
     {
         Transform[] parentTrans = { gameObject.transform.Find("ResoSetting"),gameObject.transform.Find("SizeSetting"),gameObject.transform.Find("LangSetting")};
         foreach (var singleTrans in parentTrans)

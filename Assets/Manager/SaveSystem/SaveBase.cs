@@ -15,7 +15,7 @@ public abstract class SaveBase
     }
     protected void Load(bool rootMightNotExist)
     {
-        //var json = FileAccess
+        var json = FileAccess.LoadString(_root, false);
     }
     protected void Save()
     {

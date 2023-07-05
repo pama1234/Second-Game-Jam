@@ -19,7 +19,10 @@ public class GameManager : Singleton<GameManager>
         if(nowScene != originScene)
         {
             originScene = nowScene;
-            DialogManager.Instance.Init();
+            if(nowScene == "IntroScene")
+            {
+                AudioManager.Instance.PlayBGM(BackgroundMusic.IntroScene);
+            }
         }
     }
 }
