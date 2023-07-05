@@ -62,25 +62,44 @@
     <Compile Include="Assets\TitleScene\SelectButton.cs" />
     <Compile Include="Assets\TitleScene\DeveloperMenu.cs" />
     <Compile Include="Assets\TitleScene\ButtonEvent.cs" />
+    <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionOrderLines.cs" />
+    <Compile Include="Assets\ExternalTools\TransitionBlocks\Demo\YourGameLogic.cs" />
     <Compile Include="Assets\Manager\SaveSystem\SaveWriter.cs" />
+    <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionOrderDiamond.cs" />
     <Compile Include="Assets\Manager\SaveSystem\SaveReader.cs" />
     <Compile Include="Assets\Manager\DialogManager.cs" />
+    <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionOrderSideWipe.cs" />
+    <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\PlaymakerActions\TransitionBlocksLoadLevel.cs" />
+    <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Blocks\TransitionBlock.cs" />
+    <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionOrderRandom.cs" />
     <Compile Include="Assets\Manager\SaveManager.cs" />
+    <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionOrderSpiral.cs" />
+    <Compile Include="Assets\Manager\GMCursor.cs" />
     <Compile Include="Assets\Manager\SaveSystem\FileAccess.cs" />
     <Compile Include="Assets\Manager\AudioManager.cs" />
     <Compile Include="Assets\TitleScene\TextScrolling.cs" />
+    <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionOrderAllAtOnce.cs" />
     <Compile Include="Assets\TitleScene\TitleController.cs" />
     <Compile Include="Assets\TitleScene\SettingBtnCust.cs" />
+    <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\PlaymakerActions\TransitionBlocksLoadLevelNum.cs" />
     <Compile Include="Assets\Manager\SaveSystem\SaveSettings.cs" />
     <Compile Include="Assets\Manager\TransManager.cs" />
+    <Compile Include="Assets\ExternalTools\TransitionBlocks\Demo\RandomCameraColor.cs" />
     <Compile Include="Assets\Manager\GameManager.cs" />
+    <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transitioner.cs" />
+    <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionOrderBase.cs" />
+    <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionOrderCornerWipe.cs" />
+    <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionOrderTeeth.cs" />
+    <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionOrderCheckerBoard.cs" />
     <Compile Include="Assets\Manager\Singleton.cs" />
     <Compile Include="Assets\Manager\DialogContent\DialogContent.cs" />
     <Compile Include="Assets\Manager\CursorManager.cs" />
     <Compile Include="Assets\Manager\ManagersLoader.cs" />
     <Compile Include="Assets\Manager\SaveSystem\SaveBase.cs" />
+    <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\TransitionSetup.cs" />
     <Compile Include="Assets\TitleScene\SettingMenu.cs" />
     <Compile Include="Assets\TitleScene\ContinueMenu.cs" />
+    <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionEnumRandomizer.cs" />
     <Compile Include="Assets\TitleScene\TitleMenuBase.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +107,7 @@
     <None Include="Assets\ExternalTools\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\ExternalTools\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\PostProcessing\RGBSplit.shader" />
+    <None Include="Assets\ExternalTools\TransitionBlocks\Readme.txt" />
     <None Include="Assets\ExternalTools\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\ExternalTools\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\ExternalTools\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
@@ -824,6 +844,10 @@
     <ProjectReference Include="Febucci.TextAnimator.Runtime.csproj">
       <Project>{22290922-CD65-1F80-4EFF-D00C158AEDC6}</Project>
       <Name>Febucci.TextAnimator.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="AllIn1SpriteShaderAssembly.csproj">
+      <Project>{BE4A5554-EE87-1134-9D3C-DF09261D46BB}</Project>
+      <Name>AllIn1SpriteShaderAssembly</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -11,16 +11,16 @@ public enum LanguageOption
 }
 public class LanguageManager : Singleton<LanguageManager>
 {
-    public LanguageOption nowOption;
-    public LanguageOption preOption;
+    public LanguageOption nowOption = LanguageOption.English;
+    public LanguageOption preOption = LanguageOption.English;
     public bool setChange = false;
-    Dictionary<string, string> gameDict;
+    Dictionary<string, string> gameDict = new Dictionary<string, string>();
     string nowsceneName = "";
     string presceneName = "";
     private void Start()
     {
+        //To Do: 把savesystem初始化写进来
         //在一开始把txt存进gameDict
-        gameDict = new Dictionary<string, string>();
         string path = "Language";
         TextAsset targetAsset = Resources.Load<TextAsset>(path);
         string[] lines = targetAsset.text.Split('\n');
@@ -40,9 +40,6 @@ public class LanguageManager : Singleton<LanguageManager>
                 gameDict.Add(nowLines[0], nowLines[1]);
             }
         }
-        //切换语言
-        nowOption = LanguageOption.English;
-        SwitchLanguage(nowOption);
     }
     private void OnEnable()
     {

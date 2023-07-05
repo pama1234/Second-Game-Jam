@@ -13,15 +13,15 @@ public class DialogManager : Singleton<DialogManager>
     public TextAnimatorPlayer textAnimatorPlayer;
     public void Init()
     {
-        textObject = GameObject.FindWithTag("TEXT");
-        text = textObject.GetComponent<TextMeshProUGUI>();
-        textAnimatorPlayer = textObject.GetComponent<TextAnimatorPlayer>();
-        textAnimator = textObject.GetComponent<TextAnimator>();
-        text.text = "";
+        //textObject = GameObject.FindWithTag("TEXT");
+        //text = textObject.GetComponent<TextMeshProUGUI>();
+        //textAnimatorPlayer = textObject.GetComponent<TextAnimatorPlayer>();
+        //textAnimator = textObject.GetComponent<TextAnimator>();
+        //text.text = "";
     }
     public void BeginDialog(DialogContent content)
     {
-        StartCoroutine(StartDialog(content));
+        //StartCoroutine(StartDialog(content));
     }
     public IEnumerator StartDialog(DialogContent content)
     {

@@ -7,6 +7,6 @@ public class TransManager : Singleton<TransManager>
 {
     public void ChangeScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        Transitioner.Instance.TransitionToScene(sceneName);
     }
 }

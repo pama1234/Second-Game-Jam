@@ -7,7 +7,7 @@ public class MainMenu : TitleMenuBase<MainMenu>
 {
     public void OnStartPressed()
     {
-        SceneManager.LoadScene("IntroScene");
+        TransManager.Instance.ChangeScene("IntroScene");
     }
     public void OnContinuePressed()
     {

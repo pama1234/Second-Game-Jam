@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllIn1SpriteShaderAssembly", "AllIn1SpriteShaderAssembly.csproj", "{BE4A5554-EE87-1134-9D3C-DF09261D46BB}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Febucci.TextAnimator.Runtime", "Febucci.TextAnimator.Runtime.csproj", "{22290922-CD65-1F80-4EFF-D00C158AEDC6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{1431483F-06A0-035F-62D6-3D7505B38037}"
@@ -19,6 +21,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE4A5554-EE87-1134-9D3C-DF09261D46BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE4A5554-EE87-1134-9D3C-DF09261D46BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE4A5554-EE87-1134-9D3C-DF09261D46BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE4A5554-EE87-1134-9D3C-DF09261D46BB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{22290922-CD65-1F80-4EFF-D00C158AEDC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{22290922-CD65-1F80-4EFF-D00C158AEDC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22290922-CD65-1F80-4EFF-D00C158AEDC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
