@@ -498,7 +498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <wave>Your default settings have succsfully changed</wave>
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5875f73486fb7314a942e5e01b3a3177, type: 2}
   m_sharedMaterial: {fileID: 1648647216050555103, guid: 5875f73486fb7314a942e5e01b3a3177, type: 2}
@@ -3551,7 +3551,7 @@ GameObject:
   - component: {fileID: 1008644040}
   - component: {fileID: 1008644039}
   m_Layer: 5
-  m_Name: Image
+  m_Name: SuccessPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3590,7 +3590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.58431375}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9190,9 +9190,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 923905025084690578, guid: 602c7c5521f86844e9ab2e594a36d533, type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1649119283115470467, guid: 602c7c5521f86844e9ab2e594a36d533, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8135449862917562155, guid: 602c7c5521f86844e9ab2e594a36d533, type: 3}
+      propertyPath: m_Volume
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 602c7c5521f86844e9ab2e594a36d533, type: 3}

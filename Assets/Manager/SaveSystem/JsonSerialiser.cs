@@ -12,6 +12,11 @@ public static class JsonSerialiser
     }
     public static JToken SerializeKey<T>(T key)
     {
-        return JToken.FromObject(key, _serializer);    }
+        return JToken.FromObject(key, _serializer);
+    }
+    public static T DeserializeKey<T>(string key, JObject data)
+    {
+        return data[key].ToObject<T>(_serializer);
+    }
 
 }

@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SelectButton : MonoBehaviour
 {
     List<SettingBtnCust> firstButtons = new List<SettingBtnCust>();
     List<SettingBtnCust> secondButtons = new List<SettingBtnCust>();
-    SettingBtnCust[] storageButtons;
+    List<SettingBtnCust> storageButtons = new List<SettingBtnCust>();
     public GameObject successPanel;
     public void SaveSettings()
     {
-        DialogManager.Instance.Init();
         List<string> storageSettings = new List<string>();
         foreach (var singleBtn in storageButtons)
         {
@@ -49,6 +49,16 @@ public class SelectButton : MonoBehaviour
                 }
             }
         }
+        if(LanguageManager.Instance.nowOption == LanguageOption.Chinese)
+        {
+            TMP_Text textMeshPro = successPanel.GetComponentInChildren<TMP_Text>();
+            textMeshPro.text = "<wave>您的默认设置已成功完成更改并储存,请单击鼠标左键隐藏提示信息</wave>";
+        }
+        else if(LanguageManager.Instance.nowOption == LanguageOption.English)
+        {
+            TMP_Text textMeshPro = successPanel.GetComponentInChildren<TMP_Text>();
+            textMeshPro.text = "<wave>Your default settings have succsfully changed. Please click to deactive showing panel</wave>";
+        }
         successPanel.SetActive(true);
         SaveManager.Instance.SaveSettings(storageSettings);
     }
@@ -65,17 +75,19 @@ public class SelectButton : MonoBehaviour
     public void SetButtons()
     {
         Transform[] parentTrans = { gameObject.transform.Find("ResoSetting"),gameObject.transform.Find("SizeSetting"),gameObject.transform.Find("LangSetting")};
-        foreach (var singleTrans in parentTrans)
+        for (int i = 0; i < parentTrans.Length; i++)
         {
-           storageButtons = singleTrans.gameObject.transform.GetComponentsInChildren<SettingBtnCust>();
-           firstButtons.Add(storageButtons[0]);
-           secondButtons.Add(storageButtons[1]);
+            firstButtons.Add(parentTrans[i].GetChild(0).gameObject.GetComponent<SettingBtnCust>());
+            secondButtons.Add(parentTrans[i].GetChild(1).gameObject.GetComponent<SettingBtnCust>());
+            storageButtons.Add(parentTrans[i].GetChild(0).gameObject.GetComponent<SettingBtnCust>());
+            storageButtons.Add(parentTrans[i].GetChild(1).gameObject.GetComponent<SettingBtnCust>());
         }
         for (int i = 0; i < firstButtons.Count; i++)
         {
             int j = 2 * i;
             firstButtons[i].nowOptions = (SettingBtnCust.E_nowOptions)j;
             firstButtons[i].isFirst = true;
+            firstButtons[i].isPressed = true;
             //注册事件
             firstButtons[i].PressedBtn += SettingPressedBtn;
             firstButtons[i].UnPressedBtn += SettingUnpressedBtn;
@@ -86,10 +98,15 @@ public class SelectButton : MonoBehaviour
             int j = 1 + (2 * i);
             secondButtons[i].nowOptions = (SettingBtnCust.E_nowOptions)j;
             secondButtons[i].isFirst = false;
+            secondButtons[i].isPressed = false;
             //注册事件
             secondButtons[i].PressedBtn += SettingPressedBtn;
             secondButtons[i].UnPressedBtn += SettingUnpressedBtn;
             secondButtons[i].HighlightedBtn += SettingHighlightedButton;
+        }
+        foreach (SettingBtnCust btncust in storageButtons)
+        {
+            btncust.Init();
         }
     }
     public void SettingHighlightedButton(SettingBtnCust settingBtnCust)
@@ -118,6 +135,7 @@ public class SelectButton : MonoBehaviour
         cb.normalColor = Color.clear; cb.colorMultiplier = 1f; cb.fadeDuration = 0.1f;
         settingBtnCust.colors = cb;
         settingBtnCust.GetComponentInChildren<Text>().color = Color.white;
+        settingBtnCust.isPressed = false;
     }
     public void SettingPressed(SettingBtnCust settingBtnCust)
     {
@@ -125,6 +143,7 @@ public class SelectButton : MonoBehaviour
         cb.normalColor = Color.white; cb.selectedColor = new Color(1f, 1f, 1f, 1f); cb.highlightedColor = new Color(1f, 1f, 1f, 1f); cb.pressedColor = Color.red; cb.colorMultiplier = 1f; cb.fadeDuration = 0.1f;
         settingBtnCust.colors = cb;
         settingBtnCust.GetComponentInChildren<Text>().color = Color.black;
+        settingBtnCust.isPressed = true;
     }
     public void SettingPressedBtn(SettingBtnCust settingBtnCust)
     {

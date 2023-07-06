@@ -19,6 +19,7 @@ public class TitleController : MonoBehaviour
         mainMenu.Open();
         settingMenu.selectButton.SetButtons();
         AudioManager.Instance.PlayBGM(BackgroundMusic.TitleScene);
+        SaveManager.Instance.Init();
     }
     public void OpenMenu(TitleMenuBase menu)
     {

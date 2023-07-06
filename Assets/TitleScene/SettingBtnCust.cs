@@ -37,29 +37,20 @@ public class SettingBtnCust : Button
         isHighlighted = false;
         HighlightedBtn.Invoke(this);
     }
-    protected override void DoStateTransition(SelectionState state, bool instant)
-    {
-        base.DoStateTransition(state, instant);
-        switch (state)
+    public void Init() {
+        if (initial)
         {
-            case SelectionState.Normal:
-                if (initial)
-                {
-                    if (isFirst)
-                    {
-                        isPressed = true;
-                        PressedBtn.Invoke(this);
-                    }
-                    else if (!isFirst) 
-                    {
-                        isPressed = false;
-                        UnPressedBtn.Invoke(this);
-                    }
-                    initial = false;
-                }
-                break;
-            default:
-                break;
+            if (isFirst)
+            {
+                isPressed = true;
+                PressedBtn.Invoke(this);
+            }
+            else if (!isFirst)
+            {
+                isPressed = false;
+                UnPressedBtn.Invoke(this);
+            }
+            initial = false;
         }
     }
 }

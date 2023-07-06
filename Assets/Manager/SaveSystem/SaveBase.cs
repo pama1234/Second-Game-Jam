@@ -16,6 +16,24 @@ public abstract class SaveBase
     protected void Load(bool rootMightNotExist)
     {
         var json = FileAccess.LoadString(_root, false);
+
+        if (string.IsNullOrEmpty(json))
+        {
+            if (rootMightNotExist)
+            {
+                _items = new JObject();
+                return;
+            }
+            Debug.LogError("Roots not exist");
+        }
+        try
+        {
+            _items = JObject.Parse(json);
+        }
+        catch (Exception)
+        {
+            Debug.LogError("Deserialization failed");
+        }
     }
     protected void Save()
     {
@@ -24,7 +42,7 @@ public abstract class SaveBase
         {
             json = JsonSerialiser.Serialize(_items);
         }
-        catch (Exception e)
+        catch (Exception)
         {
             Debug.LogError("Serialization failed");
         }

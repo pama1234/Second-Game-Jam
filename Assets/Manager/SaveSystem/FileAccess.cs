@@ -2,6 +2,7 @@ using System.IO;
 using UnityEngine;
 using System.Linq;
 using System.Collections.Generic;
+using System;
 
 public static class FileAccess 
 {
@@ -10,6 +11,7 @@ public static class FileAccess
     public static bool SaveString(string filename, bool includesExtension, string value)
     {
         filename = GetFilenameWithExtension(filename, includesExtension);
+
         try
         {
             CreateRootFolder();
@@ -31,11 +33,17 @@ public static class FileAccess
         try
         {
             CreateRootFolder();
-        }
-        catch (System.Exception)
-        {
 
-            throw;
+            if (Exist(fileName, true))
+            {
+                using(StreamReader reader = new StreamReader(Path.Combine(BasePath, fileName)))
+                {
+                    return reader.ReadToEnd();
+                }
+            }
+        }
+        catch (Exception)
+        {
         }
         return null;
     }
@@ -49,5 +57,11 @@ public static class FileAccess
         {
             Directory.CreateDirectory(BasePath);
         }
+    }
+    public static bool Exist(string filename, bool includesExtension)
+    {
+        filename = GetFilenameWithExtension(filename, includesExtension);
+        string fileLocation = Path.Combine(BasePath, filename);
+        return File.Exists(fileLocation);
     }
 }

@@ -12,7 +12,7 @@ public enum CompressionMode
     None,
     Gzip,
 }
-public class SaveSettings : MonoBehaviour
+public class SaveSettings
 {
     public SecurityMode SecurityMode { get; set; }
     public CompressionMode CompressionMode { get; set; }

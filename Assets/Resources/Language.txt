@@ -16,5 +16,4 @@ Programmer-OFFMIND:编程负责-OFFMIND
 Artist-FYAZASHIRU:美术-FYAZASHIRU
 Music-ZELX:背景音乐-泽西
 <wave>Developers</wave>:<wave>开发者信息</wave>
-<wave>Your default settings have succsfully changed</wave>:<wave>您的默认设置已成功完成更改并储存</wave>
 Your option change would only be implemented when you press the  "Save Changes" button:你在该界面下的修改操作只有当你按下"保存修改"按钮时才会实行
