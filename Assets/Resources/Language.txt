@@ -10,10 +10,13 @@ Full Screen:全屏游玩体验
 Windowed:窗口化
 Save Changes:保存修改
 Back:返回
+Intro Scene:背景介绍一
+Level One:教学关卡
+Intro2 Scene:背景介绍二
+Level Two:实战关卡
 Return Menu:返回标题
 Leader-OFFMIND:组织者-OFFMIND
 Programmer-OFFMIND:编程负责-OFFMIND
-Artist-FYAZASHIRU:美术-FYAZASHIRU
+Artist-HOON:美术-HOON
 Music-ZELX:背景音乐-泽西
-<wave>Developers</wave>:<wave>开发者信息</wave>
-Your option change would only be implemented when you press the  "Save Changes" button:你在该界面下的修改操作只有当你按下"保存修改"按钮时才会实行
+Planning-MOJIN:策划-末尽

@@ -65,7 +65,7 @@ public class LanguageManager : Singleton<LanguageManager>
             }
         }
     }
-    private void SwitchLanguage(LanguageOption changeTo)
+    public void SwitchLanguage(LanguageOption changeTo)
     {
         //判断nowOption与preOption的关系
         if(nowOption == preOption)

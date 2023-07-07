@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.Events;
@@ -6,7 +7,9 @@ using UnityEngine.Events;
 namespace Febucci.UI.Core
 {
     [System.Serializable]
-    public class CharacterEvent : UnityEvent<char> { }
+    public class CharacterEvent : UnityEvent<char>
+    {
+    }
 
     /// <summary>
     /// Base class for all TextAnimatorPlayers (typewriters). <br/>

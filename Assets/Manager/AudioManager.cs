@@ -12,6 +12,8 @@ public enum BackgroundMusic
 {
     TitleScene,
     IntroScene,
+    LevelOneScene,
+    LevelTwoScene,
 }
 public class AudioManager : Singleton<AudioManager>
 {

@@ -12,7 +12,12 @@ public class ManagersLoader : MonoBehaviour
     public GameObject DialogPrf;
     public GameObject GaMPrf;
     public static bool isInit = false;
-    private void Awake()
+    private void Start()
+    {
+        isInit = false;
+        Init();
+    }
+    private void Init()
     {
         if (!isInit)
         {

@@ -56,12 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scenes\Scenes\TitleScene\EventHandler.cs" />
     <Compile Include="Assets\Manager\SaveSystem\JsonSerialiser.cs" />
     <Compile Include="Assets\Manager\LanguageManager.cs" />
-    <Compile Include="Assets\TitleScene\MainMenu.cs" />
-    <Compile Include="Assets\TitleScene\SelectButton.cs" />
-    <Compile Include="Assets\TitleScene\DeveloperMenu.cs" />
-    <Compile Include="Assets\TitleScene\ButtonEvent.cs" />
+    <Compile Include="Assets\Scenes\Scenes\TitleScene\MainMenu.cs" />
+    <Compile Include="Assets\Scenes\Scenes\TitleScene\SelectButton.cs" />
+    <Compile Include="Assets\Scenes\Scenes\TitleScene\DeveloperMenu.cs" />
+    <Compile Include="Assets\Scenes\Scenes\TitleScene\ButtonEvent.cs" />
     <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionOrderLines.cs" />
     <Compile Include="Assets\ExternalTools\TransitionBlocks\Demo\YourGameLogic.cs" />
     <Compile Include="Assets\Manager\SaveSystem\SaveWriter.cs" />
@@ -77,13 +78,14 @@
     <Compile Include="Assets\Manager\GMCursor.cs" />
     <Compile Include="Assets\Manager\SaveSystem\FileAccess.cs" />
     <Compile Include="Assets\Manager\AudioManager.cs" />
-    <Compile Include="Assets\TitleScene\TextScrolling.cs" />
+    <Compile Include="Assets\Scenes\Scenes\TitleScene\TextScrolling.cs" />
     <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionOrderAllAtOnce.cs" />
-    <Compile Include="Assets\TitleScene\TitleController.cs" />
-    <Compile Include="Assets\TitleScene\SettingBtnCust.cs" />
+    <Compile Include="Assets\Scenes\Scenes\TitleScene\TitleController.cs" />
+    <Compile Include="Assets\Scenes\Scenes\TitleScene\SettingBtnCust.cs" />
     <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\PlaymakerActions\TransitionBlocksLoadLevelNum.cs" />
     <Compile Include="Assets\Manager\SaveSystem\SaveSettings.cs" />
     <Compile Include="Assets\Manager\TransManager.cs" />
+    <Compile Include="Assets\Scenes\Scenes\IntroScene\IntroController.cs" />
     <Compile Include="Assets\ExternalTools\TransitionBlocks\Demo\RandomCameraColor.cs" />
     <Compile Include="Assets\Manager\GameManager.cs" />
     <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transitioner.cs" />
@@ -97,10 +99,13 @@
     <Compile Include="Assets\Manager\ManagersLoader.cs" />
     <Compile Include="Assets\Manager\SaveSystem\SaveBase.cs" />
     <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\TransitionSetup.cs" />
-    <Compile Include="Assets\TitleScene\SettingMenu.cs" />
-    <Compile Include="Assets\TitleScene\ContinueMenu.cs" />
+    <Compile Include="Assets\Scenes\Scenes\TitleScene\SettingMenu.cs" />
+    <Compile Include="Assets\Scenes\Scenes\TitleScene\ContinueMenu.cs" />
     <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionEnumRandomizer.cs" />
-    <Compile Include="Assets\TitleScene\TitleMenuBase.cs" />
+    <Compile Include="Assets\Scenes\Scenes\TitleScene\TitleMenuBase.cs" />
+    <Compile Include="Assets\Scenes\Scenes\GameScene\Waypoint.cs" />
+    <Compile Include="Assets\Scenes\Scenes\GameScene\LevelOneController.cs" />
+    <Compile Include="Assets\Scenes\Scenes\GameScene\WaypointEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ExternalTools\Febucci\Text Animator\Example\Font\OFL.txt" />
