@@ -57,10 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\Scenes\TitleScene\EventHandler.cs" />
+    <Compile Include="Assets\Scenes\Scenes\GameScene\WaypointEditor.cs" />
     <Compile Include="Assets\Manager\SaveSystem\JsonSerialiser.cs" />
     <Compile Include="Assets\Manager\LanguageManager.cs" />
     <Compile Include="Assets\Scenes\Scenes\TitleScene\MainMenu.cs" />
     <Compile Include="Assets\Scenes\Scenes\TitleScene\SelectButton.cs" />
+    <Compile Include="Assets\Scenes\Scenes\GameScene\LevelOneController.cs" />
     <Compile Include="Assets\Scenes\Scenes\TitleScene\DeveloperMenu.cs" />
     <Compile Include="Assets\Scenes\Scenes\TitleScene\ButtonEvent.cs" />
     <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionOrderLines.cs" />
@@ -84,6 +86,7 @@
     <Compile Include="Assets\Scenes\Scenes\TitleScene\SettingBtnCust.cs" />
     <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\PlaymakerActions\TransitionBlocksLoadLevelNum.cs" />
     <Compile Include="Assets\Manager\SaveSystem\SaveSettings.cs" />
+    <Compile Include="Assets\Scenes\Scenes\GameScene\Waypoint.cs" />
     <Compile Include="Assets\Manager\TransManager.cs" />
     <Compile Include="Assets\Scenes\Scenes\IntroScene\IntroController.cs" />
     <Compile Include="Assets\ExternalTools\TransitionBlocks\Demo\RandomCameraColor.cs" />
@@ -103,9 +106,6 @@
     <Compile Include="Assets\Scenes\Scenes\TitleScene\ContinueMenu.cs" />
     <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionEnumRandomizer.cs" />
     <Compile Include="Assets\Scenes\Scenes\TitleScene\TitleMenuBase.cs" />
-    <Compile Include="Assets\Scenes\Scenes\GameScene\Waypoint.cs" />
-    <Compile Include="Assets\Scenes\Scenes\GameScene\LevelOneController.cs" />
-    <Compile Include="Assets\Scenes\Scenes\GameScene\WaypointEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ExternalTools\Febucci\Text Animator\Example\Font\OFL.txt" />
