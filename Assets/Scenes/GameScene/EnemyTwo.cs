@@ -55,6 +55,7 @@ public class EnemyTwo : MonoBehaviour
         {
             animator.SetTrigger("DIE");
             CursorManager.Instance.AddCoins(30);
+            //ûд
             Invoke("DestroyWhole", 0.4f);
         }
     }

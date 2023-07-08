@@ -15,6 +15,7 @@ public class CursorManager : Singleton<CursorManager>
 {
     private Vector2 mousePos;
     public Sprite[] sprites;
+    public int nowSprite;
     public SpriteRenderer spriteRenderer;
     public float duality = 40f;
     public float coins = 0f;
@@ -45,6 +46,18 @@ public class CursorManager : Singleton<CursorManager>
             coins,fingers,duality,
         };
     }
+    public void ChangeFinger()
+    {
+        duality = 40f;
+        if(nowSprite < sprites.Length)
+        {
+            nowSprite = nowSprite + 1;
+            spriteRenderer.sprite = sprites[nowSprite];
+        }if(nowSprite == sprites.Length)
+        {
+            TransManager.Instance.ChangeScene("GameOver");
+        }
+    }
     public void ResetDuality()
     {
         coins = 0f;
@@ -54,5 +67,6 @@ public class CursorManager : Singleton<CursorManager>
     public void ChangeSprite(FingerOption option)
     {
         spriteRenderer.sprite = sprites[(int)option];
+        nowSprite = (int)option;
     }
 }

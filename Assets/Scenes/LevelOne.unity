@@ -915,7 +915,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: AllIn1SpriteShader/AllIn1SpriteShader
   m_Shader: {fileID: 4800000, guid: a36b7719ff0465b42ab1407d67672c5f, type: 3}
-  m_ShaderKeywords: CHROMABERR_ON DISTORT_ON HOLOGRAM_ON
+  m_ShaderKeywords: CHROMABERR_ON DISTORT_ON HOLOGRAM_ON OVERLAY_ON SHAKEUV_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -1074,7 +1074,7 @@ Material:
     - _OutlineTexYSpeed: 0
     - _OutlineWidth: 0.004
     - _OverlayBlend: 1
-    - _OverlayGlow: 1
+    - _OverlayGlow: 0.8
     - _PinchUvAmount: 0.35
     - _PixelateSize: 32
     - _PosterizeGamma: 0.75
@@ -1088,7 +1088,7 @@ Material:
     - _ShadowAlpha: 0.5
     - _ShadowX: 0.1
     - _ShadowY: -0.05
-    - _ShakeUvSpeed: 2.5
+    - _ShakeUvSpeed: 1.8
     - _ShakeUvX: 1.5
     - _ShakeUvY: 1
     - _ShineGlow: 1
