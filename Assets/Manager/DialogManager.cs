@@ -40,6 +40,12 @@ public class DialogManager : Singleton<DialogManager>
             DContent = dialogContent;
             BeginDialogLvOne(DContent);
         }
+        if (name == "levelOneTW")
+        {
+            textObject = GameObject.FindWithTag("BETEXT");
+            DContent = dialogContent;
+            BeginDialogLvOne(DContent);
+        }
     }
     private void Update()
     {
@@ -49,7 +55,10 @@ public class DialogManager : Singleton<DialogManager>
             {
                 if (textFinished && !cancelTyping)
                 {
-                    StartCoroutine(StartDialog(DContent.dialogList));
+                    if(index <= DContent.dialogList.Count)
+                    {
+                        StartCoroutine(StartDialog(DContent.dialogList));
+                    }
                 }
                 else if (!textFinished)
                 {
@@ -96,13 +105,13 @@ public class DialogManager : Singleton<DialogManager>
             cancelTyping = false;
             textFinished = true;
             index++;
-        }else if(index >= dialogs.Count && !firstdialogFinished)
+        }else if(index == dialogs.Count && !firstdialogFinished)
         {
             firstdialogFinished = true;
-        }else if(index >= dialogs.Count && !isIntroFinished)
+        }else if(index == dialogs.Count && !isIntroFinished)
         {
             isIntroFinished = true;
-        }else if(index >= dialogs.Count && !isBEfinished)
+        }else if(index == dialogs.Count && !isBEfinished)
         {
             isBEfinished = true;
         }

@@ -7,6 +7,7 @@ public enum SoundEffect
     Click,
     Select,
     Typing,
+    Mousehit,
 }
 public enum BackgroundMusic
 {
