@@ -49,3 +49,19 @@ The following packages were updated:
   com.unity.2d.animation from version 5.0.1 to 5.0.7
   com.unity.2d.psdimporter from version 4.0.1 to 4.1.0
   com.unity.2d.spriteshape from version 5.0.1 to 5.1.4
+
+=== Sat Jul  8 22:41:49 2023
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were 已更新:
+  com.unity.2d.animation 从版本 5.0.7 到 7.0.10
+  com.unity.2d.pixel-perfect 从版本 4.0.1 到 5.0.3
+  com.unity.2d.psdimporter 从版本 4.1.0 到 6.0.7
+  com.unity.2d.spriteshape 从版本 5.1.4 到 7.0.7
+  com.unity.collab-proxy 从版本 1.11.2 到 2.0.3
+  com.unity.ide.rider 从版本 2.0.7 到 3.0.18
+  com.unity.postprocessing 从版本 3.1.1 到 3.2.2
+  com.unity.test-framework 从版本 1.1.29 到 1.1.31
+  com.unity.timeline 从版本 1.4.8 到 1.6.4
