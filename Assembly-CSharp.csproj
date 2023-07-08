@@ -57,7 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\Scenes\TitleScene\EventHandler.cs" />
-    <Compile Include="Assets\Scenes\Scenes\GameScene\WaypointEditor.cs" />
     <Compile Include="Assets\Manager\SaveSystem\JsonSerialiser.cs" />
     <Compile Include="Assets\Manager\LanguageManager.cs" />
     <Compile Include="Assets\Scenes\Scenes\TitleScene\MainMenu.cs" />
@@ -77,7 +76,6 @@
     <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionOrderRandom.cs" />
     <Compile Include="Assets\Manager\SaveManager.cs" />
     <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionOrderSpiral.cs" />
-    <Compile Include="Assets\Manager\GMCursor.cs" />
     <Compile Include="Assets\Manager\SaveSystem\FileAccess.cs" />
     <Compile Include="Assets\Manager\AudioManager.cs" />
     <Compile Include="Assets\Scenes\Scenes\TitleScene\TextScrolling.cs" />
@@ -106,6 +104,11 @@
     <Compile Include="Assets\Scenes\Scenes\TitleScene\ContinueMenu.cs" />
     <Compile Include="Assets\ExternalTools\TransitionBlocks\Scripts\Transition Orders\TransitionEnumRandomizer.cs" />
     <Compile Include="Assets\Scenes\Scenes\TitleScene\TitleMenuBase.cs" />
+    <Compile Include="Assets\Scenes\Scenes\GameScene\LevelOneManager.cs" />
+    <Compile Include="Assets\Scenes\Scenes\GameScene\Spawner.cs" />
+    <Compile Include="Assets\Scenes\Scenes\GameScene\ObjectPooler.cs" />
+    <Compile Include="Assets\Scenes\Scenes\GameScene\Enemy.cs" />
+    <Compile Include="Assets\Scenes\Scenes\GameScene\DataController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ExternalTools\Febucci\Text Animator\Example\Font\OFL.txt" />

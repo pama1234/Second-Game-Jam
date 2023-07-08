@@ -68,9 +68,14 @@ public class LanguageManager : Singleton<LanguageManager>
     public void SwitchLanguage(LanguageOption changeTo)
     {
         //判断nowOption与preOption的关系
-        if(nowOption == preOption)
+        if (nowOption == LanguageOption.Chinese)
         {
-            return;
+            preOption = LanguageOption.Chinese;
+            changeTo = LanguageOption.Chinese;
+        } else if (nowOption == LanguageOption.English)
+        {
+            preOption = LanguageOption.English;
+            changeTo = LanguageOption.English;
         }
         //先遍历所有的物体
         Scene scene = SceneManager.GetActiveScene();

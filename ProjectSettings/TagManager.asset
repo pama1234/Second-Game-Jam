@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TEXT
   - BETEXT
+  - FADER
   layers:
   - Default
   - TransparentFX

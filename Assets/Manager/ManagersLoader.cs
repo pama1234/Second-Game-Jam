@@ -11,13 +11,12 @@ public class ManagersLoader : MonoBehaviour
     public GameObject SavePrf;
     public GameObject DialogPrf;
     public GameObject GaMPrf;
-    public GameObject FaderPrf;
     public static bool isInit = false;
     private void Awake()
     {
         if (!isInit)
         {
-            if (FaderPrf == null || AudioPrf == null || CursorPrf == null || TransPrf == null || LangPrf == null || SavePrf == null || DialogPrf == null || GaMPrf == null)
+            if ( AudioPrf == null || CursorPrf == null || TransPrf == null || LangPrf == null || SavePrf == null || DialogPrf == null || GaMPrf == null)
             {
                 Debug.LogError("Please check your ManagersLoader gameObject");
             }
@@ -28,12 +27,6 @@ public class ManagersLoader : MonoBehaviour
                     Destroy(FindObjectOfType<AudioManager>().gameObject);
                 }
                 DontDestroyOnLoad(Instantiate(AudioPrf));
-
-                if (FindObjectOfType<Transitioner>() != null)
-                {
-                    Destroy(FindObjectOfType<Transitioner>().gameObject);
-                }
-                DontDestroyOnLoad(Instantiate(FaderPrf));
 
                 if (FindObjectOfType<CursorManager>() != null)
                 {

@@ -58,7 +58,7 @@ public class SaveManager : Singleton<SaveManager>
                             Screen.fullScreen = true;
                             ishighSize = true;
                         }
-                        else if (r == "lowReso")
+                        else if (r == "lowSize")
                         {
                             Screen.fullScreen = false;
                             islowSize = true;

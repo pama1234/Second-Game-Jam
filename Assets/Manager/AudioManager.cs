@@ -28,6 +28,13 @@ public class AudioManager : Singleton<AudioManager>
             sfx[(int)soundEffectenum].Play();
         }
     }
+    public void StopBGM()
+    {
+        for (int i = 0; i < bgm.Length; i++)
+        {
+            bgm[i].Stop();
+        }
+    }
     public void PlayBGM(BackgroundMusic backgroundMusicenum)
     {
         foreach (var single in bgm)

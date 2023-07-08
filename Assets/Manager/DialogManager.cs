@@ -18,6 +18,8 @@ public class DialogManager : Singleton<DialogManager>
     public bool textFinished;
     public bool cancelTyping;
     public int index;
+    //给levelOne的用的
+    public bool isBEfinished = false;
     public void Init(string name,DialogContent dialogContent)
     {
         if(name == "Intro")
@@ -32,10 +34,16 @@ public class DialogManager : Singleton<DialogManager>
             DContent = dialogContent;
             BeginDialog(DContent);
         }
+        if (name == "levelOne")
+        {
+            textObject = GameObject.FindWithTag("BETEXT");
+            DContent = dialogContent;
+            BeginDialogLvOne(DContent);
+        }
     }
     private void Update()
     {
-        if(SceneManager.GetActiveScene().name == "IntroScene")
+        if(SceneManager.GetActiveScene().name == "IntroScene" || SceneManager.GetActiveScene().name == "LevelOne")
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -50,9 +58,21 @@ public class DialogManager : Singleton<DialogManager>
             }
         }
     }
+    public void BeginDialogLvOne(DialogContent content)
+    {
+        text = textObject.GetComponentInChildren<TextMeshProUGUI>();
+        textAnimatorPlayer = textObject.GetComponentInChildren<TextAnimatorPlayer>();
+        textAnimator = textObject.GetComponentInChildren<TextAnimator>();
+        index = 0;
+        StartCoroutine(StartDialog(content.dialogList));
+    }
     public void BeginDialog(DialogContent content)
     {
         text = textObject.GetComponent<TextMeshProUGUI>();
+        if(text == null)
+        {
+            text = textObject.GetComponentInChildren<TextMeshProUGUI>();
+        }
         textAnimatorPlayer = textObject.GetComponent<TextAnimatorPlayer>();
         textAnimator = textObject.GetComponent<TextAnimator>();
         index = 0;
@@ -82,6 +102,9 @@ public class DialogManager : Singleton<DialogManager>
         }else if(index >= dialogs.Count && !isIntroFinished)
         {
             isIntroFinished = true;
+        }else if(index >= dialogs.Count && !isBEfinished)
+        {
+            isBEfinished = true;
         }
     }
 }
